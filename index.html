@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>iq0's website</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./static/discord.css">
+
+        <script src="./static/jssucks.js"></script>    
+    </head>
+<body>
+
+    <!-- Side Navigation -->
+    <nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
+      <h1 class="w3-xxxlarge w3-text-theme">Side Navigation</h1>
+      <button class="w3-bar-item w3-button" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
+      <a href="#" class="w3-bar-item w3-button">Link 1</a>
+      <a href="#" class="w3-bar-item w3-button">Link 2</a>
+      <a href="#" class="w3-bar-item w3-button">Link 3</a>
+      <a href="#" class="w3-bar-item w3-button">Link 4</a>
+    </nav>
+
+<header class="w3-container w3-theme w3-padding" id="myHeader">
+  <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i> 
+  <div class="w3-center">
+  <h4 class="w3-animate-zoom">Hello world!</h4>
+  <h1 class="w3-xxxlarge w3-animate-bottom">About me</h1>
+    <div class="w3-padding-32">
+      <button id="donotclickbutton" class="w3-btn w3-xlarge w3-dark w3-hover-dark-grey" onclick="donotclick()", style="font-weight:900;">DON'T CLICK ME</button>
+    </div>
+  </div>
+</header>
+
+
+<div class="w3-row-padding w3-center w3-margin-top">
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+  <h3>Bot development</h3><br>
+  <img src="https://cdn.discordapp.com/attachments/778906478236270592/1134587169567166595/discord-logo-bss-3181610605.png" width="150" height="150" ></img>
+  <p>Music Player with Built-in Controls.</p>
+  <p>Anime Analyzer for media-based Anime search.</p>
+  </div>
+</div>
+
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+  <h3>Achievements</h3><br>
+  <i class="fa fa-bug w3-margin-bottom w3-text-theme"  style="font-size:120px"></i>
+  <p>AtHack Finales.</p>
+  <p>Hacktivitycon2021 by Hacker0x01.</p>
+  <p>14th place in <a href="https://www.codingame.com/profile/7b2948b0a0e427b35fd9982d69e501d19686544" target="_blank">Codingame</a>.</p>
+  <p>8th place in <a href="https://profile.satr.codes/iq0/public/overview" target="_blank">Coderhub</a>.<p>
+
+  </div>
+</div>
+
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+  <h3>Currently</h3><br>
+  <i class="fa fa-list w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+  <p>Studying at UQU.</p>
+  <p>Studying Reverse engineering.</p>
+  <p>Program custom bots.</p>
+  </div>
+</div>
+</div>
+
+<div class="w3-row-padding"> 
+
+<div class="w3-third">
+<div class="w3-card">
+    <div class="chatlog__embed">
+        <div class="chatlog__embed-color-pill" style="background-color:rgba(32,34,37,1)"></div>
+    </div>
+    <div class="chatlog__embed-content-container">
+        <div class="chatlog__embed-content">
+            <div class="chatlog__embed-text">
+                
+                <div class="chatlog__embed-title">
+                    <span class="markdown">Currently playing:</span>
+                </div> 
+
+                <div class="chatlog__embed-description">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><strong class="markdown">Rick Astley - Never Gonna Give You Up (Official Music Video)</strong></a>
+                <ul class="quote">Volume: <strong id="VolumePercentage">25%</strong><br>
+                Loop: <strong class="LoopButton">OFF</strong><br></ul>
+                    <div class="LoadingContainer" style="display: flex">
+
+                        <strong id="LoadingBarCounter" style="flex-basis: 10px;margin-top: -5px;">0:00</strong>
+
+                        <div class="w3-dark-grey", style="margin-top: 5px;flex-basis: 300px;height:3px">
+
+                          <div id="LoadingBar"class="w3-grey" style="flex-basis: 100px;height:3px;width:0%"></div>
+                        </div>
+                        <strong style="flex-basis: 10px;margin-top: -5px;">03:32</strong>
+
+                    </div>
+                </div> 
+
+            </div>
+        </div>
+            
+        <div class="chatlog__components">
+            <div class="chatlog__component-button " style="background-color:#4F545C" onclick="resetTime()">
+                <a style="text-decoration:none">
+                <span class="chatlog__button-label">
+                    <img class="emoji emoji--large" src="https://cdn.discordapp.com/emojis/1088635653689987162.webp?size=128&quality=lossless">
+                </span>
+
+                </a>
+
+            </div>
+            <div class="chatlog__component-button " style="background-color:#4F545C" onclick="Pause()">
+                <a  style="text-decoration:none">
+                <span class="chatlog__button-label">
+                    <img id="PauseButton" class="emoji emoji--large" src="https://cdn.discordapp.com/emojis/1088635662279905300.webp?size=128&quality=lossless">
+                </span>
+
+                </a>
+
+            </div>
+            <div class="chatlog__component-button " style="background-color:#4F545C" onclick="resetTime()">
+                <a style="text-decoration:none">
+                <span class="chatlog__button-label">
+                    <img class="emoji emoji--large" src="https://cdn.discordapp.com/emojis/1088635658689593364.png">
+                </span>
+
+                </a>
+
+            </div>
+            <div id="RabbitSpeed" class="chatlog__component-button " style="background-color:#4F545C" onclick="IncreaseSpeed(0.50)">
+                <a style="text-decoration:none">
+                <span class="chatlog__button-label">
+                    <img class="emoji emoji--large" src="https://cdn.discordapp.com/emojis/1088635656470798346.webp?size=128&quality=lossless">
+                </span>
+
+                </a>
+
+            </div>
+
+        </div>
+        <div class="chatlog__components">
+            <div class="chatlog__component-button " style="background-color:#4F545C" onclick="setVolume(-25)">
+                <a style="text-decoration:none">
+                <span class="chatlog__button-label">
+                    <img class="emoji emoji--large" src="https://cdn.discordapp.com/emojis/1088641179572256859.webp?size=128&quality=lossless">
+                </span>
+
+                </a>
+
+            </div>
+            <div class="chatlog__component-button " style="background-color:#4F545C" onclick="setVolume(25)">
+                <a style="text-decoration:none">
+                <span class="chatlog__button-label">
+                    <img class="emoji emoji--large" src="https://cdn.discordapp.com/emojis/1088640510941466624.webp?size=128&quality=lossless">
+                </span>
+
+                </a>
+
+            </div>
+            <div class="chatlog__component-button " style="background-color:#4F545C" onclick="alert('Sorry i don\'t have a recommendations for you')">
+                <a style="text-decoration:none">
+                <span class="chatlog__button-label">
+                    <img class="emoji emoji--large" src="https://cdn.discordapp.com/emojis/1088635665283043368.webp?size=128&quality=lossless">
+                </span>
+
+                </a>
+
+            </div>
+            <div id="TurtSpeed" class="chatlog__component-button" style="background-color:#4F545C" onclick="IncreaseSpeed(1.50)">
+                    <a style="text-decoration:none">
+                    <span class="chatlog__button-label">
+                        <img class="emoji emoji--large" src="https://cdn.discordapp.com/emojis/1088635673650667521.webp?size=128&quality=lossless">
+                    </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="w3-third">
+<div class="w3-card-4">
+    <div class="chatlog__message-group">
+        <div id="chatlog__message-container" class="chatlog__message-container" data-message-id="1099517360555171910">
+            <div class="chatlog__message">
+                <div class="chatlog__message-aside">
+                    
+                    <img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/463849271645700096/7101a0fab76175bbbdb6aeb704dae4a3.webp">
+                </div>
+                <div class="chatlog__message-primary">
+                    
+                    <div class="chatlog__header">
+                        <span class="chatlog__author-name" title="iq0"  style="color: #FFFFFF;">iq0</span>
+                        
+                        <span class="chatlog__timestamp">Today at 9:00 AM</span>
+                    </div>
+
+                    <div class="chatlog__content chatlog__markdown">
+                        <span class="chatlog__markdown-preserve">anime</span>
+                    <div class="chatlog__content chatlog__markdown">
+                        <img src="https://cdn.discordapp.com/attachments/1131446751354683494/1134378045562687539/IMG_9012.jpg"class="chatlog__markdown-preserve" width="150" height="150"></img>
+
+
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="chatlog__message-container" class="chatlog__message-container" data-message-id="1099517360555171910">
+            <div class="chatlog__message">
+                <div class="chatlog__message-aside">
+                    
+                    <img class="chatlog__avatar" src="https://cdn.discordapp.com/attachments/1131446751354683494/1134378045562687539/IMG_9012.jpg">
+                </div>
+                <div class="chatlog__message-primary">
+                    
+                    <div class="chatlog__header">
+                        <span class="chatlog__author-name" title="Anime"  style="color: #FFFFFF;">Anime bot</span>
+                        <span class="chatlog__bot-tag">BOT</span>
+                        <span class="chatlog__timestamp">Today at 9:00 AM</span>
+                    </div>
+
+            <div class="chatlog__embed">
+                <div class="chatlog__embed-color-pill" style="background-color:rgba(227,145,60,1)"></div>
+            <div class="chatlog__embed-content-container">
+                <div class="chatlog__embed-content">
+                    <div class="chatlog__embed-text">
+                        
+                        <div class="chatlog__embed-title">
+                            <a href="https://myanimelist.net/anime/28999/Charlotte">Charlotte</a>
+                        </div> 
+
+                        <div class="chatlog__embed-description">
+                        <lu>Charlotte(シャーロット)</lu>
+                        <br>
+                        <lu>Episode: </lu><strong>7:13</strong>
+                        <br>
+                        <lu>From: </lu><strong>09:04 </strong><lu>To: </lu><strong>09:09</strong>
+                        <br>
+                        <strong>Tags:</strong>
+                        <br>
+                        <lu>Super Power, Time Manipulation, Tragedy, Urban Fantasy, Male Protagonist</lu>
+
+                        </div> 
+                        <div class="chatlog__embed-image">
+                            <img class="chatlog__embed-image" src="https://cdn.discordapp.com/attachments/1131446751354683494/1134378045562687539/IMG_9012.jpg" width="150" height="150">
+                    </div>
+                </div>
+                        </div>
+                        <a class="chatlog__embed-footer">92.31%</a>
+
+            </div>
+
+            </div>
+
+
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
+
+
+
